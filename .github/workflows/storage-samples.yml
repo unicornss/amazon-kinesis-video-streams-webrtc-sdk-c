@@ -21,7 +21,7 @@ jobs:
     timeout-minutes: 20
 
     env:
-      AWS_KVS_LOG_LEVEL: 7
+      AWS_KVS_LOG_LEVEL: 1
 
     permissions:
       id-token: write
