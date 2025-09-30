@@ -39,7 +39,7 @@ jobs:
       - name: Install deps
         run: |
           sudo apt-get update
-          sudo apt-get -y install valgrind
+          sudo apt-get -y install valgrind 
 
       - name: Setup cmake
         uses: jwlawson/actions-setup-cmake@v2
@@ -55,7 +55,7 @@ jobs:
       - name: Run tests
         run: |
           cd build
-          valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose --log-file=valgrind-master.txt ./samples/kvsWebrtcClientMaster demo-channel-storage audio-video-storage  testsrc opus h264 &
+          valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose --log-file=valgrind-master.txt ./samples/kvsWebrtcClientMaster demo-channel-storage 1 opus h264 &
           PID_MASTER=$!
      
 
